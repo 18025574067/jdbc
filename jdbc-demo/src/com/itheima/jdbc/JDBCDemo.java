@@ -13,13 +13,14 @@ public class JDBCDemo {
         Class.forName("com.mysql.jdbc.Driver");
 
         // 2. 获取连接
-        String url = "jdbc:mysql://localhost:3306/db1?useSSL=false";
+//        String url = "jdbc:mysql://localhost:3306/db1";
+        String url = "jdbc:mysql://localhost:3306/db1?useSSL=false&serverTimezone=UTC";
         String user = "root";
         String password = "mysql";
         Connection conn =  DriverManager.getConnection(url, user, password);
 
         // 3. 定义sql语句
-        String sql = "update account set money = 2000 where id = 1";
+        String sql = "update account set money = 5000 where id = 1";
 
         // 4. 获取执行sql的对象 Statement;
         Statement stmt = conn.createStatement();
