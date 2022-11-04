@@ -36,7 +36,8 @@ public class JDBCDemo5_ResultSet {
 
         // 6. 处理结果, 遍历rs中的所有数据
         // 6.1 光标向下移动一行, 并且判断当前行是否有数据.
-        while (rs.next()){
+        /**
+         * while (rs.next()){
             // 6.2 获取数据 getXxx();
             int id = rs.getInt(1);
             String name = rs.getString(2);
@@ -45,7 +46,16 @@ public class JDBCDemo5_ResultSet {
             System.out.println("id:" + id + ", name:" + name + ", money:" + money);
             System.out.println("===========");
         }
+         */
+        while (rs.next()){
+            // 6.2 获取数据 getXxx();
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            double money = rs.getDouble("money");
 
+            System.out.println("id:" + id + ", name:" + name + ", money:" + money);
+            System.out.println("===========");
+        }
         // 7. 关闭资源
         rs.close();
         stmt.close();
