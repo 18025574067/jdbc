@@ -66,7 +66,7 @@ public class JDBCDemo4_Statement {
 
         // 6. 处理结果
 //        System.out.println(count);
-        // DDL删除, 执行成功也会输入count为0
+        // 执行DDL, 返回可能是0.
         if (count > 0){
             System.out.println("修改成功");
         }else {
