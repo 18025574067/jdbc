@@ -47,6 +47,7 @@ public class JDBCDemo5_ResultSet {
         }
 
         // 7. 关闭资源
+        rs.close();
         stmt.close();
         conn.close();
     }
