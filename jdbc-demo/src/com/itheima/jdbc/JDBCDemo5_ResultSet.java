@@ -54,7 +54,7 @@ public class JDBCDemo5_ResultSet {
             double money = rs.getDouble("money");
             System.out.println("id:" + id + ", name:" + name + ", money:" + money);
         }
-        // 7. 关闭资源
+        // 7. 释放资源
         rs.close();
         stmt.close();
         conn.close();
