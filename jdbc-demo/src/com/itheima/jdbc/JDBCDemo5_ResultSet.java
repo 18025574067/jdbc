@@ -71,10 +71,6 @@ public class JDBCDemo5_ResultSet {
      */
     @Test
     public void testResultSet2() throws Exception {
-        // 1. 注册驱动
-        // Class.forName("com.mysql.jdbc.Driver");
-
-        // 2. 获取连接 如果连接是本地的MySQL, 并且端口是3306, 可以简化书写.
         String url = "jdbc:mysql:///db1?useSSL=false";
         String user = "root";
         String password = "mysql";
