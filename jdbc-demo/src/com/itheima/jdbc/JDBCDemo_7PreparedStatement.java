@@ -55,6 +55,8 @@ public class JDBCDemo_7PreparedStatement {
     @Test
     public void testPreparedStatement2() throws Exception {
         // 2. 获取连接 如果连接是本地的MySQL, 并且端口是3306, 可以简化书写.
+        // useServerPrepStmts=true 参数开户预编译功能。
+//        String url = "jdbc:mysql:///db1?useSSL=false";
         String url = "jdbc:mysql:///db1?useSSL=false&useServerPrepStmts=true";
         String user = "root";
         String password = "mysql";
@@ -73,9 +75,17 @@ public class JDBCDemo_7PreparedStatement {
         // 设置?的值
         pstmt.setString(1, name);
         pstmt.setString(2, pwd);
+        ResultSet rs = null;
 
         // 执行sql语句
-        ResultSet rs = pstmt.executeQuery();
+        rs = pstmt.executeQuery();
+
+        // 设置?的值
+        pstmt.setString(1, "ccc");
+        pstmt.setString(2, "bbaa");
+
+        // 执行sql语句
+        rs = pstmt.executeQuery();
 
         // 判断登录是否成功
         if (rs.next()){
