@@ -72,6 +72,8 @@ public class JDBCDemo_7PreparedStatement {
         // 获取pstmt对象
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
+        Thread.sleep(10000);
+
         // 设置?的值
         pstmt.setString(1, name);
         pstmt.setString(2, pwd);
