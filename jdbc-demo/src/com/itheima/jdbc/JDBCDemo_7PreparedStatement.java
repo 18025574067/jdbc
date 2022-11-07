@@ -6,7 +6,7 @@ import java.sql.*;
 /**
     JDBC API详解: ResultSet.
  */
-class JDBCDemo_7PreparedStatement {
+public class JDBCDemo_7PreparedStatement {
     /**
         SQL防注入.
      */
@@ -20,8 +20,8 @@ class JDBCDemo_7PreparedStatement {
 
         // 接收用户输入的用户名和密码
         String name = "张三";
-//        String pwd = "' or '1' = '1";
-        String pwd = "123";
+        String pwd = "' or '1' = '1";
+//        String pwd = "123";
 
         String sql = "select * from tb_user where username = ? and password = ?";
 
