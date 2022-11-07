@@ -88,6 +88,4 @@ public class JDBCDemo6_UserLogin {
         stmt.close();
         conn.close();
     }
-
-
 }
