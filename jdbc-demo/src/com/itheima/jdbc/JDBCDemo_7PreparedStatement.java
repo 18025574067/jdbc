@@ -55,15 +55,15 @@ public class JDBCDemo_7PreparedStatement {
     @Test
     public void testPreparedStatement2() throws Exception {
         // 2. 获取连接 如果连接是本地的MySQL, 并且端口是3306, 可以简化书写.
-        String url = "jdbc:mysql:///db1?useSSL=false";
+        String url = "jdbc:mysql:///db1?useSSL=false&useServerPrepStmts=true";
         String user = "root";
         String password = "mysql";
         Connection conn =  DriverManager.getConnection(url, user, password);
 
         // 接收用户输入的用户名和密码
         String name = "张三";
-        String pwd = "' or '1' = '1";
-//        String pwd = "123";
+//        String pwd = "' or '1' = '1";
+        String pwd = "123";
 
         String sql = "select * from tb_user where username = ? and password = ?";
 
