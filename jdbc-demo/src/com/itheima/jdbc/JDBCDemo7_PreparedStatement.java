@@ -6,7 +6,7 @@ import java.sql.*;
 /**
     JDBC API详解: ResultSet.
  */
-public class JDBCDemo_7PreparedStatement {
+public class JDBCDemo7_PreparedStatement {
     /**
         SQL防注入.
      */
