@@ -65,30 +65,22 @@ public class JDBCDemo7_PreparedStatement {
 
         // 接收用户输入的用户名和密码
         String name = "张三";
-//        String pwd = "' or '1' = '1";
-        String pwd = "123";
+        String pwd = "' or '1' = '1";
+//        String pwd = "123";
 
         String sql = "select * from tb_user where username = ? and password = ?";
 
         // 获取pstmt对象
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
-        Thread.sleep(10000);
+        Thread.sleep(5000);
 
         // 设置?的值
         pstmt.setString(1, name);
         pstmt.setString(2, pwd);
-        ResultSet rs = null;
 
         // 执行sql语句
-        rs = pstmt.executeQuery();
-
-        // 设置?的值
-        pstmt.setString(1, "ccc");
-        pstmt.setString(2, "bbaa");
-
-        // 执行sql语句
-        rs = pstmt.executeQuery();
+        ResultSet rs = pstmt.executeQuery();
 
         // 判断登录是否成功
         if (rs.next()){
