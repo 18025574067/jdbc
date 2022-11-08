@@ -58,7 +58,7 @@ public class JDBCDemo7_PreparedStatement {
         // 2. 获取连接 如果连接是本地的MySQL, 并且端口是3306, 可以简化书写.
         // useServerPrepStmts=true 参数开户预编译功能。
 //        String url = "jdbc:mysql:///db1?useSSL=false";
-        String url = "jdbc:mysql:///db1?useSSL=false&useServerPrepStems=true";
+        String url = "jdbc:mysql:///db1?useSSL=false&useServerPrepStmts=true";
         String user = "root";
         String password = "mysql";
         Connection conn =  DriverManager.getConnection(url, user, password);
