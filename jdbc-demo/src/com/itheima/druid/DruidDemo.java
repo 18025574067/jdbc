@@ -25,6 +25,8 @@ public class DruidDemo {
 
         // 5. 获取数据库连接 connection
         Connection conn = dataSource.getConnection();
+
+
         System.out.println(conn);
 
 //        System.out.println(System.getProperty(user.dir));
