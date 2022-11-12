@@ -93,7 +93,7 @@ public class BrandTest {
          * 添加
          * 1. SQL:insert into tb_brand(brand_name, company_name, ordered, description, status) values(?, ?, ?, ?, ?);
          * 2. 参数: 除了id之外所有参数.
-         * 3. 结果: List<Brand>
+         * 3. 结果: 返回值为boolean.
          */
         // 1. 获取Connection对象
         // 3. 加载配置文件
